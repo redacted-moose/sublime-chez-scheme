@@ -1,0 +1,10 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+    { "name": "Chez Scheme",
+  "scopeName": "source.chez_scheme",
+  "fileTypes": ["ss", "scm", "sch"],
+  "uuid": "707c6d70-66c2-457f-9b7d-737d6ec0190d",
+
+  "patterns": [
+    
+  ]
+}
