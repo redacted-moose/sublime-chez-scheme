@@ -11,7 +11,42 @@
 	<key>name</key>
 	<string>Chez Scheme</string>
 	<key>patterns</key>
-	<array/>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Single-line comments</string>
+			<key>match</key>
+			<string>(;).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.semicolon.chez_scheme</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>#\|</string>
+			<key>comment</key>
+			<string>Multi-line comments</string>
+			<key>end</key>
+			<string>\|#</string>
+			<key>name</key>
+			<string>comment.block.chez_scheme</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numerical constants</string>
+			<key>match</key>
+			<string>(^|\b)\d+($|\b)</string>
+			<key>name</key>
+			<string>constant.numeric.chez_scheme</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Quoted literal values, like '(1 2 3 4) (currently doesn't handle correctly) or 'a</string>
+			<key>match</key>
+			<string>\'(\((^|\b).*($|\b)\)|[^()\s]+)</string>
+			<key>name</key>
+			<string>constant.character.escape.chez_scheme</string>
+		</dict>
+	</array>
 	<key>scopeName</key>
 	<string>source.chez_scheme</string>
 	<key>uuid</key>
